@@ -16,17 +16,11 @@ gem 'omniauth-oauth2', :git => 'git://github.com/intridea/omniauth-oauth2.git'
 
 # Under active development
 gem 'omniauth-tumblr', :git => 'git://github.com/jamiew/omniauth-tumblr.git'
-#gem 'omniauth-tumblr', :path => '~/dev/omniauth-strategies/omniauth-tumblr'
-gem 'omniauth-youtube', :git => 'git://github.com/jamiew/omniauth-youtube.git'
-#gem 'omniauth-youtube', :path => '~/dev/omniauth-strategies/omniauth-youtube'
 
+gem 'tumblr_client'
 
-# For testing/comparison
-gem 'omniauth-facebook'
-gem 'omniauth-github'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
-gem 'omniauth-vimeo'
+gem 'activerecord-session_store'
+
 group :development do
     gem 'capistrano', '~> 3.1.0', require: false
     gem 'capistrano-rvm', '~> 0.1.2', require: false

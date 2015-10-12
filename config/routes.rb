@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'sessions#new'
+  root :to => 'sessions#index'
 
   # resources :users, :only => [ :show, :edit, :update ]
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1349288507">
+  <component name="DataSourceManagerImpl" format="xml" hash="2868224886">
     <data-source source="LOCAL" name="Rails omniauth-rails-app: development" uuid="8a1b49dd-4afe-41ca-aa13-193995298ea5">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>

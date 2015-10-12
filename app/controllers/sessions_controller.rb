@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
-  before_action :increment_view_count, :current_user, :db_user, :blogs, :guests, only: :index
+  before_action :increment_view_count, :current_user, :db_user, :blogs, :current_blog, :guests, only: :index
   helper_method :current_user, :logged_in?, :db_user, :current_blog
 
   def index
+    current_blog params[:blog]
   end
 
 
@@ -58,11 +59,22 @@ class SessionsController < ApplicationController
     @db_user ||= User.find_by_name session[:user_id]
   end
 
-  def current_blog
+  def current_blog(name='')
     unless logged_in?
       return
     end
-    @blogs.select {|b| b[:current]}
+
+    @blogs.each do |b|
+      if name
+        b['current'] = b['name'] == name
+      end
+      @current_blog = b if b['current']
+    end
+
+    unless @current_blog
+      @current_blog = @blogs[0]
+      @current_blog['current'] = true
+    end
   end
 
   def blogs

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tumblr Epic Stats</title>
+  <title>Epic Tumblr Stats</title>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Tumblr Epic Stats</a>
+      <a class="navbar-brand" href="/">Epic Tumblr Stats</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,7 +39,11 @@
         <!--</li>-->
       <!--</ul>-->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/auth/tumblr">Войти</a></li>
+        <%-if @db_user %>
+            <li><a href="/"><%=@db_user.name%></a></li>
+        <%-else%>
+            <li><a href="/auth/tumblr">Войти</a></li>
+        <%end%>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

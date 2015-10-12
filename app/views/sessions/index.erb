@@ -1,8 +1,3 @@
-<pre class="container">
-  <%-if @client %>
-    <%=JSON.pretty_generate(@blogs)[0] %>
-  <%end%>
-  </pre>
 <div class="row">
   <div class="col-md-3">
     <div class="panel panel-default panel-primary">
@@ -13,7 +8,7 @@
         <div class="list-group">
           <%-if @blogs %>
               <%-@blogs.each do |blog| %>
-              <a href="#" class="list-group-item">
+              <a href="/<%=blog['name']%>" class="list-group-item <%= blog['current'] ? 'active':''%>">
                 <h4 class="list-group-item-heading"><%=blog['name']%></h4>
                 <p class="list-group-item-text">
                   followers: <%=blog['followers']%><br>
@@ -27,6 +22,9 @@
     </div>
   </div>
   <div class="col-md-7">
+    <div class="page-header">
+      <h1><%=@current_blog['name']%></h1>
+    </div>
     <h2>Top tags</h2>
 
     <div class="panel panel-default">

@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>omniauth-rails-app</title>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
+  <title>Tumblr Epic Stats</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Tumblr Epic Stats</a>
+    </div>
 
-<h1><a href="http://github.com/jamiew/omniauth-rails-app">omniauth-rails-app</a></h1>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+        <!--<li><a href="#">Link</a></li>-->
+        <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="#">Action</a></li>-->
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">One more separated link</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/auth/tumblr">Войти</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-default panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Your Blogs</h3>
+        </div>
+        <div class="panel-body">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">First</h4>
+              <p class="list-group-item-text">... followers, ... likes</p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Second</h4>
+              <p class="list-group-item-text">... followers, ... likes</p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Second</h4>
+              <p class="list-group-item-text">... followers, ... likes</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h2>Top posts</h2>
 
-<p>For more information see the <a href="http://github.com/jamiew/omniauth-rails-app#README">README</a></p>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUwNWJlMWM5MWIgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTA1YmUxYzkxYiI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS41IiB5PSIxMDUuNyI+MjQyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUwNWJlMWEyNzggdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTA1YmUxYTI3OCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS41IiB5PSIxMDUuNyI+MjQyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUwNWJlMWRhNGEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTA1YmUxZGE0YSI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS41IiB5PSIxMDUuNyI+MjQyeDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" style="height: 200px; width: 100%; display: block;" data-src="holder.js/100%x200" alt="100%x200">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
 
+    </div>
+    <div class="col-md-2">
+      <h3>Who else see epic stats</h3>
+      <div class="list-group">
+        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
+      </div>
+    </div>
+  </div>
+</div>
 <%= yield %>
 
 </body>

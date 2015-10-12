@@ -1,7 +1,7 @@
 server '128.199.219.149', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:jonybang/omniauth-rails-app.git'
-set :application,     'omniauth_rails-app'
+set :application,     'omniauth_rails_app'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
